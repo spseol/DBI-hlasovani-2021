@@ -1,0 +1,17 @@
+{% extends 'base.html.j2' %}
+
+{%block title%}Edit{%endblock%}
+
+{% block obsah %}
+
+<h1>Editace příspěvku</h1>
+
+<form method="post">
+  <input type="hidden" name="editid" value={{ request.args.get('editid') }}>
+  <textarea name="prispevek" rows="12" cols="70">{{ prispevek }}</textarea>
+  <p><button type="submit">Odeslat</button> </p>
+</form>
+
+
+
+{% endblock obsah %}
